@@ -42,10 +42,6 @@ i = 0
 cap = cv2.VideoCapture(0)
 ret, img = cap.read()
 
-
-#definimos el estado en 0
-estado=0
-
 while ret:
     imagen_en_gris = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -67,8 +63,7 @@ while ret:
             if i == 3:
                 i=0
                 direccion = stat.mean(predicciones)
-                Butia.mover(Robot,direccion,estado)
-
+                Butia.mover(Robot,direccion)
     ret, img = cap.read()
 
 cap.release()
