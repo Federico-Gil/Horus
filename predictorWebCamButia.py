@@ -79,7 +79,7 @@ while ret:
             if i == 3:
                 i=0
                 direccion = stat.mean(predicciones)
-                Butia.mover2(Robot,direccion)
+                Butia.mover(Robot,direccion)
 
     k = cv2.waitKey(30) & 0xff
     if k == 27:
